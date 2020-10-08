@@ -44,6 +44,8 @@ int main()
             cout<<0<<endl;
             continue;
         }
+        /*main jadoogar hai mera naam goga 
+            mujh jaisa nahin koi hoga*/
         dp[0][0]=dp[0][1]=dp[0][2]=-1;
         dp[0][ch[0]-'1']=0;
         for(i=1;ch[i]!=NULL;i++)
@@ -54,12 +56,7 @@ int main()
         }
         int ans=1<<30;
         for(i=2;ch[i]!=NULL;i++)
-        {
-            int l = min(min(dp[i][0],dp[i][1]),dp[i][2]);
-            if(l==-1) continue;
-            if(ans>(i-l+1))
-             ans=i-l+1;
-        }
+        {int l = min(min(dp[i][0],dp[i][1]),dp[i][2]);   if(l==-1) continue;if(ans>(i-l+1))ans=i-l+1;}
         if(ans==(1<<30)) 
             ans=0;
         cout<<ans<<endl;
