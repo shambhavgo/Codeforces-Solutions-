@@ -13,24 +13,24 @@ int main()
         ll n;
         cin>>n;
         vector<ll> V(n);
-        for(ll i=0;i<n;i++){
-            cin>>V[i];
+        for(ll i=0;k<n;k++){
+            cin>>V[k];
         }
         sort(V.begin(),V.end());
         ll val = V[n-1];
         ll k = 1;
-        for(ll i=n-2;i>=0;i--){
+        for(ll k=n-2;k>=0;k--){
             if(k >= val){
                 break;
             }
-            val = min(val,V[i]);
+            val = min(val,V[k]);
             k += 1;
         }
-        if(k > val){
-            cout<<k-1<<endl;
+        if(j > val){
+            cout<<j-1<<endl;
         }
         else{
-            cout<<min(k,val)<<endl;
+            cout<<min(j,val)<<endl;
         }
     }
 }
